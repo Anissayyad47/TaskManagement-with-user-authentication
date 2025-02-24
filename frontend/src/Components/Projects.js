@@ -16,7 +16,7 @@ const ProjectsPage = () => {
         }
         async function fetchProjects() {
             try {
-                const response = await axios.get(`http://localhost:5000/projects/${userId}`);
+                const response = await axios.get(`https://taskmanagement-with-user-authentication.onrender.com/projects/${userId}`);
                 setProjects(response.data); // 🔥 Store projects in state
             } catch (error) {
                 console.error("Error fetching projects:", error);
