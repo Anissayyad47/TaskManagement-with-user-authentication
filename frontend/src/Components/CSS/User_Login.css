@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     padding: 20px;
 }
@@ -87,4 +88,8 @@ h2 {
     color: #ff4d4d;
     text-align: center;
     margin-top: 20px;
+}
+
+.Backend-message{
+    margin-top: 80px;
 }

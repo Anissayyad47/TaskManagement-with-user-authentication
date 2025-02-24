@@ -72,6 +72,12 @@ export default function User_Login (){
         </p>
         {message && <p className="message">{message}</p>}
       </div>
+      <div className='Backend-message'>
+  <p>
+    If you encounter any errors, please try again after 1–2 minutes. 
+    This website is hosted on Render, and the backend may take some time to restart if it was in sleep mode.
+  </p>
+</div>
     </div>
   );
 
