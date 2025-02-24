@@ -20,7 +20,7 @@ export default function User_SignUp(){
     }else {
         e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/sign-up", {
+      const response = await axios.post("https://taskmanagement-with-user-authentication.onrender.com/sign-up", {
         username,
         password,
         Name,
