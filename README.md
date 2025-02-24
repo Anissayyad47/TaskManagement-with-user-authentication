@@ -46,4 +46,4 @@ This project is ideal for individuals and teams who want to streamline their tas
 
 
 You can visite this project live
-https://taskmanagement-with-user-authentication-nv7a.onrender.com/project
+https://taskmanagement-with-user-authentication-nv7a.onrender.com
