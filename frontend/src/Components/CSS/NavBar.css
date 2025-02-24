@@ -1,0 +1,103 @@
+/* Navbar Styles */
+.navbar-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e1e;
+}
+.navbar-container-in{
+    width: 90%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar-profile {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-profile:hover {
+    transform: scale(1.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+}
+
+/* Show Sidebar */
+.sidebar.open {
+    right: 0;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.sidebar-content hr{
+    border: 2px solid;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.2s ease-in-out;
+}
+
+.sidebar-item:hover {
+    background: #444;
+}
+
+/* Sidebar Icons */
+.sidebar-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Logout Button */
+.logout {
+    color: red;
+    font-weight: bold;
+}

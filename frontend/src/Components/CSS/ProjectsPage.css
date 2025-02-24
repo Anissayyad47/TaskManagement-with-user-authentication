@@ -1,0 +1,47 @@
+.projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-container-in{
+    width: 90%;
+    margin-top: 40px;
+}
+
+.all-projects{
+    font-size: 30px;
+}
+
+.line{
+    border: 1px solid;
+}
+
+.project-list{
+    width: 50%;
+    border: 1px solid rgb(184, 184, 184);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.project-list:hover{
+    background-color: rgb(238, 234, 234);
+}
+.project-list p{
+    font-size: 20px;
+    width: 78%;
+    margin-left: 2%;
+}
+.project-list button{
+    width: 18%;
+    margin-right: 1%;
+    height: 40px;
+    border: 1px solid rgb(180, 177, 177);
+}
+
+.project-list button:hover{
+    background-color: rgb(211, 207, 207);
+}
