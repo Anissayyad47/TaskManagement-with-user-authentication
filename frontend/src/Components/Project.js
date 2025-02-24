@@ -31,7 +31,7 @@ export default function Project(){
         console.log("Task is: " + createTask);
     
         try {
-            const response = await axios.post("http://localhost:5000/createTask", { projectId, title: createTask });
+            const response = await axios.post("https://taskmanagement-with-user-authentication.onrender.com/createTask", { projectId, title: createTask });
     
             setMessage(response.data.message);
             alert("Task Created Successfully!");
@@ -56,7 +56,7 @@ export default function Project(){
         }
         async function fetchProjects() {
             try {
-                const response = await axios.get(`http://localhost:5000/projects/${userId}`);
+                const response = await axios.get(`https://taskmanagement-with-user-authentication.onrender.com/projects/${userId}`);
                 setProjects(response.data); // 🔥 Store projects in state
             } catch (error) {
                 console.error("Error fetching projects:", error);
@@ -73,7 +73,7 @@ export default function Project(){
         }
         async function fetchProjects() {
             try {
-                const response = await axios.get(`http://localhost:5000/tasks/${projectId}`);
+                const response = await axios.get(`https://taskmanagement-with-user-authentication.onrender.com/tasks/${projectId}`);
                 setGetTask(response.data); // 🔥 Store projects in state
             } catch (error) {
                 console.error("Error fetching projects:", error);
@@ -92,7 +92,7 @@ async function handleSlecetTaskStatus(taskId, status) {
     setTaskStatus(status); // ✅ State updates asynchronously
 
     try {
-        const response = await axios.put(`http://localhost:5000/tasks/${taskId}/status`, { status });
+        const response = await axios.put(`https://taskmanagement-with-user-authentication.onrender.com/tasks/${taskId}/status`, { status });
         console.log("Updated Task:", response.data.task);
         alert("Task updated");
         setTaskUpdated(prev => !prev); // ✅ This will trigger a re-fetch in `useEffect`
@@ -107,7 +107,7 @@ async function handleSlecetTaskStatus(taskId, status) {
     // Edite Task ************************************
     async function handleEditeTask(taskId){
         try {
-            const response = await axios.put(`http://localhost:5000/editeTask/${taskId}`, { title:editTaskcontent });
+            const response = await axios.put(`https://taskmanagement-with-user-authentication.onrender.com/editeTask/${taskId}`, { title:editTaskcontent });
             console.log("Updated Task:", response.data.task);
             alert("Task Edited");
             setTaskUpdated(prev => !prev); // ✅ This will trigger a re-fetch in `useEffect`
@@ -118,7 +118,7 @@ async function handleSlecetTaskStatus(taskId, status) {
 
     async function handleDeleteTask( taskId){
         try {
-            await axios.delete(`http://localhost:5000/deleteTasks/${taskId}`);
+            await axios.delete(`https://taskmanagement-with-user-authentication.onrender.com/deleteTasks/${taskId}`);
             alert("Task Deleted Successfully");
             
             // ✅ Remove the deleted task from UI without refreshing
