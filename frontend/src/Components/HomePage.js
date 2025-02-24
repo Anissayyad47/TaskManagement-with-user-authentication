@@ -21,7 +21,7 @@ const HomePage = () => {
         }
         async function fetchUserName(){
             try{
-                const response=await axios.get(`http://localhost:5000/userName/${userId}`)
+                const response=await axios.get(`https://taskmanagement-with-user-authentication.onrender.com/userName/${userId}`)
                 setUsername(response.data.display_name);
                 localStorage.setItem("Username",response.data.display_name );
                 console.log("user Name is : "+response.data.display_name);
@@ -42,7 +42,7 @@ const HomePage = () => {
         setProjectTitle(""); // Reset input
 
         try {
-            const response = await axios.post("http://localhost:5000/createProject", { 
+            const response = await axios.post("https://taskmanagement-with-user-authentication.onrender.com/createProject", { 
                 userId, 
                 project_title: projectTitle 
             });
